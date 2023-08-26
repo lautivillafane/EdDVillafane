@@ -96,5 +96,42 @@ def main():
     
     print(recortar(nro,lim_inf,lim_sup))
 
+# if __name__ == "__main__":
+#     main()
+
+"""Ejercicio 6.
+Realizar una función que se llame separar() que reciba una lista de nros y
+devuelva dos listas ordenadas.
+La primera con nros pares.
+La segunda con nros impares."""
+
+def separar(lista):
+    num_pares = []
+    num_impares = []
+    for i in lista:
+        if i%2 == 0:
+            num_pares.append(i)
+        else:
+            num_impares.append(i)
+    return sorted(num_pares), sorted(num_impares)
+
+def main():
+    #   Falta corregir errores, como por ej si el user pone una letra que no sea 'Y' se rompe.
+    fin_bucle = "N"
+    numeros = []
+
+    print("Podés empezar a agregar numeros! Una vez que termine, escriba 'Y'")
+    
+    while fin_bucle == "N":
+        num = input("Indique el número a agregar: ")
+        if num.upper() == "Y":
+            fin_bucle = "Y"
+        else:
+            numeros.append(int(num))
+    
+    listapares, listaimpares = separar(numeros)
+    print(listapares,"\n",listaimpares)
+
+
 if __name__ == "__main__":
     main()
