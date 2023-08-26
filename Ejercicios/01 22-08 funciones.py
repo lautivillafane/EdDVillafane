@@ -68,5 +68,33 @@ def main():
     num2 = int(input("Indique el segundo número: "))
     print(intermedio(num1,num2))
 
+# if __name__ == "__main__":
+#     main()
+
+"""Ejercicio 5.
+Realizar una función que se llame recortar() que reciba 3 parámetros.
+1º param => nro a recortar
+2º param => es el límite inferior
+3º param => es el límite superior
+La función debe cumplir lo siguiente:
+Devolver el límite inferior si el nro es menor
+Devolver el límite superior si el nro es mayor
+Devolver el nro si no supera los límites
+"""
+def recortar(nro, limite_inf, limite_sup):
+    if nro < limite_inf:
+        return limite_inf
+    elif nro > limite_sup:
+        return limite_sup
+    else:
+        return nro
+
+def main():
+    nro = int(input("Indique el número a recortar: "))
+    lim_inf = int(input("Indique el límite inferior: "))
+    lim_sup = int(input("Indique el límite superior: "))
+    
+    print(recortar(nro,lim_inf,lim_sup))
+
 if __name__ == "__main__":
     main()
