@@ -50,6 +50,23 @@ def main():
     num1 = int(input("Indique el primer número a comparar: "))
     num2 = int(input("Indique el segundo número a comparar: "))
     print(relacion(num1,num2))
-    
+
+# if __name__ == "__main__":
+#     main()
+
+"""Ejercicio 4.
+Realizar una función que se llame intermedio() que a partir de dos nros
+devuelva el punto intermedio. Ej. El punto intermedio entre 10 y 24 = 17; entre
+12 y 50 = 31.
+"""
+
+def intermedio(num1, num2):
+    return (num1+num2)/2
+
+def main():
+    num1 = int(input("Indique el primer número: "))
+    num2 = int(input("Indique el segundo número: "))
+    print(intermedio(num1,num2))
+
 if __name__ == "__main__":
     main()
