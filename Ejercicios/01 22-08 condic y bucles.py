@@ -66,3 +66,90 @@ def main():
 
 if __name__ == "__main__":
     main()
+
+"""Ejercicio 4.
+Definir una lista
+Contar los elementos de esa lista
+Al finalizar mostrar por pantalla la cantidad de elementos de la lista
+No utilizar función len
+"""
+def main():
+    meses = ['Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio', 'Julio', 'Agosto', 'Septiembre', 'Octubre', 'Noviembre', 'Diciembre']
+    cont = 0
+    for mes in meses:
+        cont = cont + 1
+    
+    print(f"La lista contiene {cont} elementos")
+
+if __name__ == "__main__":
+    main()
+
+"""Ejercicio 5.
+Definir una lista de números
+Sumar todos sus valores de esa lista
+Al finalizar mostrar por pantalla el total de la suma.
+No utilizar función sum
+"""
+def main():
+    numeros = [1,3,5,7,10,16,23]
+    suma = 0
+    for num in numeros:
+        suma = suma + num
+    
+    print(f"La suma total de la lista es de {suma}")
+
+if __name__ == "__main__":
+    main()
+
+"""Ejercicio 6.
+Definir una lista de números
+Mostrar por pantalla el valor promedio de la lista.
+No utilizar funciones sum ni len"""
+def main():
+    numeros = [1,3,5,7,10,16,23]
+    suma = 0
+    cont = 0
+    for num in numeros:
+        suma = suma + num
+        cont = cont + 1
+    
+    res = suma/cont
+    print(f"El promedio de la lista es de {res}")
+
+if __name__ == "__main__":
+    main()
+
+"""Ejercicio 7.
+Definir una lista de números
+Encontrar el valor máximo de la lista
+Imprimir el valor
+No utilizar max"""
+
+def main():
+    numeros = [-50,1,3,70,5,7,10,16,23,50]
+    num_max = -1000
+    for num in numeros:
+        if num > num_max:
+            num_max = num
+    
+    print(f"El valor máximo de la lista es {num_max}")
+
+if __name__ == "__main__":
+    main()
+
+"""Ejercicio 8.
+Definir una lista de números
+Encontrar el valor mínimo de la lista
+Imprimir el valor
+No utilizar min"""
+def main():
+    numeros = [1,3,70,5,7,10,16,-1,23,50]
+    num_min = 10000000
+    for num in numeros:
+        if num < num_min:
+            num_min = num
+    
+    print(f"El valor mínimo de la lista es {num_min}")
+
+if __name__ == "__main__":
+    main()
