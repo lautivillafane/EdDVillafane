@@ -79,5 +79,25 @@ def main():
     print(f"El monto total es de: {tot_monto}")
     print(f"El valor promedio es de: {valor_promedio}")
 
-if __name__ == '__main__':
+# if __name__ == '__main__':
+#     main()
+
+"""
+Ejercicio 3.
+Implementar una función que calcule la suma de todos los números enteros
+comprendidos entre cero y un número entero positivo dado.
+"""
+def suma_enteros(num):
+    if num == 0:
+        return 0
+    else:
+        return num + suma_enteros(num-1)
+    
+
+def main():
+    num = int(input("Indique el numero: "))
+    resultado = suma_enteros(num)
+    print(resultado)
+
+if __name__ == "__main__":
     main()
