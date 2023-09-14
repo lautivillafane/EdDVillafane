@@ -29,7 +29,55 @@ def main():
         print(f"{lista[i]}:")
         promedio = lista[i][3]/lista[i][2]
         print(f"El promedio es: {promedio}\n")
-if __name__ == "__main__":
+# if __name__ == "__main__":
+#     main()
+
+
+"""
+Ejercicio 2.
+Genere un diccionario vacío que luego se irá llenando según lo que ingrese el
+usuario. Pedir los siguientes datos:
+ISBN
+Nombre del libro
+Stock
+Precio del libro
+Cuando el usuario ingrese un 0 como ISBN se deberá imprimir:
+    - Todos los datos ingresados
+    - La cantidad total de libros
+    - El monto total de todos los libros
+    - El valor promedio de los libros
+"""
+
+def main():
+    dicc_libros = {}
+    isbn = 1
+    tot_libros = 0
+    tot_monto = 0
+    valor_promedio = 0
+
+    while isbn != 0:
+        isbn = int(input("Ingrese el ISBN del libro: "))
+        if isbn != 0:
+            nombre_libro = input("Ingrese el nombre del libro: ")  
+            stock = int(input("Ingrese el stock del libro: "))
+            precio_libro = float(input("Ingrese el precio del libro: "))
+            dicc_libros[isbn] = {
+                    "nombre": nombre_libro,
+                    "stock": stock,
+                    "precio": precio_libro
+                }
+    
+    for i in dicc_libros:
+        tot_libros = tot_libros + dicc_libros[i]['stock']
+        tot_monto = tot_monto + (dicc_libros[i]['precio'] * dicc_libros[i]['stock'])
+        valor_promedio = round(tot_monto/tot_libros,2)
+        print(f"{dicc_libros[i]['nombre']: }")
+        print(f"- {i}\n- {dicc_libros[i]['stock']} libros\n- ${dicc_libros[i]['precio']}")
+        
+    # print(dicc_libros)
+    print(f"En total hay {tot_libros} libros")
+    print(f"El monto total es de: {tot_monto}")
+    print(f"El valor promedio es de: {valor_promedio}")
+
+if __name__ == '__main__':
     main()
-
-
