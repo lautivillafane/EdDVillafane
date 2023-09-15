@@ -162,5 +162,36 @@ def main():
     num = int(input("Indique el numero para la cuenta regresiva: "))
     bomba(num)
 
+# if __name__ == "__main__":
+#     main()
+
+"""
+Ejercicio 7.
+Escriba una función recursiva para contar en cuantos intentos se puede adivinar
+el número de un dado.
+Pasos a seguir:
+Genere un nro random
+Solicite al usuario que ingrese un nro
+Verifique si es correcto informe que acerto en X intento
+Si no acertó, cuente el intento y vuelva a solicitar el nro
+"""
+# Puede utilizar la siguiente librería para generar los nros random al principiodel archivo
+from random import *
+
+def juego(dado, num_usuario, cont):
+    if dado == num_usuario:
+        if cont>1:
+            print(f"Acertó en {cont} intentos!")
+        else:
+            print("Acertó en un intento!")
+    else:
+        num_usuario = int(input("Incorrecto. Elija otro numero: "))
+        juego(dado, num_usuario, cont+1)
+
+def main():
+    num_dado = randint(1,6)
+    num_usuario = int(input("Indique el numero del dado: "))
+    juego(num_dado, num_usuario, 1)
+
 if __name__ == "__main__":
     main()
