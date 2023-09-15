@@ -99,5 +99,41 @@ def main():
     resultado = suma_enteros(num)
     print(resultado)
 
+# if __name__ == "__main__":
+#     main()
+
+"""
+Ejercicio 4.
+Escribir una función recursiva que permita mostrar los valores de un vector de
+atrás hacia adelante.
+"""
+def vector_reversa(vec,indice):
+    if indice < 0:
+        return  
+    
+    print(vec[indice])
+    vector_reversa(vec, indice - 1)
+
+def main():
+    mi_vector = [1, 2, 3, 4, 5]
+    vector_reversa(mi_vector, len(mi_vector) - 1)
+
 if __name__ == "__main__":
     main()
+
+    
+"""
+Ejercicio 5.
+Implementar una función recursiva que permita recorrer una matriz y mostrar sus
+valores.
+"""
+def recorrer_matriz(matriz):
+    # con
+    # while 
+    pass
+
+def main():
+    pass
+
+# if __name__ == "__main__":
+#     main()
