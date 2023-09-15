@@ -142,5 +142,25 @@ def main():
     recorrer_matriz(a,0,0)
     pass
 
+# if __name__ == "__main__":
+#     main()
+
+"""
+Ejercicio 6.
+Dado un nro iniciar una cuenta regresiva por medio de una función recursiva,
+imprimir la cuenta y al llegar a cero imprimir por pantalla "¡Booom!".
+"""
+def bomba(num):
+    if num < 0:
+        print("¡Booom!")
+        return
+    else:
+        print(num)
+        bomba(num-1)
+
+def main():
+    num = int(input("Indique el numero para la cuenta regresiva: "))
+    bomba(num)
+
 if __name__ == "__main__":
     main()
