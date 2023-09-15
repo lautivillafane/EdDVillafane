@@ -118,8 +118,8 @@ def main():
     mi_vector = [1, 2, 3, 4, 5]
     vector_reversa(mi_vector, len(mi_vector) - 1)
 
-if __name__ == "__main__":
-    main()
+# if __name__ == "__main__":
+#     main()
 
     
 """
@@ -127,13 +127,20 @@ Ejercicio 5.
 Implementar una función recursiva que permita recorrer una matriz y mostrar sus
 valores.
 """
-def recorrer_matriz(matriz):
-    # con
-    # while 
-    pass
+def recorrer_matriz(matriz, fila, columna):
+    if fila == len(matriz):
+        return 
+
+    if columna == len(matriz[fila]):
+        recorrer_matriz(matriz, fila + 1, 0)
+    else:
+        print(matriz[fila][columna])
+        recorrer_matriz(matriz, fila, columna + 1)
 
 def main():
+    a = [[23,45,63],[72,81,91],[56,64,37],[34,75,26]]
+    recorrer_matriz(a,0,0)
     pass
 
-# if __name__ == "__main__":
-#     main()
+if __name__ == "__main__":
+    main()
